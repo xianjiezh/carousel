@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播</title>
+    <style>
+        .container {}
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .container .picsWrapper{
+            width:178px;
+            margin: 0 auto;
+            border: 1px solid red;
+            overflow: hidden;
+        }
+        .container .pics{
+            height: 180px;
+            border: 1px solid #000;
+        }
+
+        .container .pics img{
+            float:left;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ul>li {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #a30;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="picsWrapper">
+            <div class="pics clearfix">
+                <img src="./img/react.png" width="178" height="168" alt="React">
+                <img src="./img/angular.png" width="174" height="168" alt="Angular">
+                <img src="./img/vue.png" width="174" height="168" alt="Vue">
+                <img src="./img/node.png" width="174" height="168" alt="Node">
+            </div>
+        </div>
+        <div class="buttons">
+            <ul>
+                <li class="button1"></li>
+                <li class="button2"></li>
+                <li class="button3"></li>
+                <li class="button4"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="main.js"></script>
+
+</html>
