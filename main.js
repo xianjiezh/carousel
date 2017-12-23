@@ -1,5 +1,4 @@
 
-
 $('li').on('click', function (event) {
     let target = event.target || window.target
     let n = $(target).index()
@@ -9,7 +8,6 @@ $('li').on('click', function (event) {
     $('li').eq(n).addClass('active')
 })
 
-
 let n = 1
 function setTimer() {
     let len = $('li').length
@@ -18,12 +16,12 @@ function setTimer() {
     $('li').eq(num).trigger('click')
     n += 1
 }
-let timer = setInterval(setTimer, 3000)
 
+let timer = setInterval(setTimer, 1500)
 let picWrapper = document.getElementsByClassName('picsWrapper')[0]
 picWrapper.onmouseenter = function () {
     clearInterval(timer)
 }
 picWrapper.onmouseleave = function () {
-    timer = setInterval(setTimer, 3000)
+    timer = setInterval(setTimer, 1500)
 }
