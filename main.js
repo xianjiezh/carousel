@@ -13,7 +13,6 @@ $('li').on('click', function (event) {
 let n = 1
 function setTimer() {
     let len = $('li').length
-    console.log('len:' + len)
     let num = n % 4
     console.log('num:' + num)
     $('li').eq(num).trigger('click')
@@ -23,10 +22,8 @@ let timer = setInterval(setTimer, 3000)
 
 let picWrapper = document.getElementsByClassName('picsWrapper')[0]
 picWrapper.onmouseenter = function () {
-    console.log('鼠标进入')
     clearInterval(timer)
 }
 picWrapper.onmouseleave = function () {
-    console.log('鼠标离开')
     timer = setInterval(setTimer, 3000)
 }
