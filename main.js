@@ -12,7 +12,9 @@ let n = 1
 function setTimer() {
     let len = $('li').length
     let num = n % 4
-    console.log('num:' + num)
+    $('li').eq(num).on('click',function(){
+        n = num
+    })
     $('li').eq(num).trigger('click')
     n += 1
 }
